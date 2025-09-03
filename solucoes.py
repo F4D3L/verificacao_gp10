@@ -7,5 +7,15 @@ def cifra_de_cesar(texto, deslocamento):
     pass
 
 def encontrar_maior_palavra(frase):
-    # TODO: Implementar lógica
-    pass
+    # Separa a frase em palavras e remove pontos e vírgulas
+    palavras = [i.strip(".,!?") for i in frase.split()]
+    
+    maior = ""
+    for i in palavras:
+        if len(i) > len(maior):
+            maior = i
+    return maior
+
+
+frase = "qual é a maiorpalavra!?!?!?"
+print(encontrar_maior_palavra(frase))
