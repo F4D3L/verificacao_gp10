@@ -1,6 +1,9 @@
 def sao_anagramas(string1, string2):
-    # TODO: Implementar lógica
-    pass
+    palavra_teste = string2[::-1]
+    if palavra_teste == string1:
+        return True
+    else:
+        return False
 
 def cifra_de_cesar(texto, deslocamento):
     # TODO: Implementar lógica
@@ -19,3 +22,6 @@ def encontrar_maior_palavra(frase):
 
 frase = "qual é a maiorpalavra!?!?!?"
 print(encontrar_maior_palavra(frase))
+
+print(sao_anagramas("roma", "amor"))
+print(sao_anagramas("casa", "arroz"))
